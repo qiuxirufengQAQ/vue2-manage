@@ -1,34 +1,32 @@
 module.exports = {
     root: true,
-    parser: 'babel-eslint',
+    parser: "babel-eslint",
     parserOptions: {
-        sourceType: 'module'
+        sourceType: "module",
     },
     env: {
         browser: true,
-        node: true
+        node: true,
     },
-    extends: 'eslint:recommended',
+    extends: "eslint:recommended",
     // required to lint *.vue files
-    plugins: [
-        'html'
-    ],
+    plugins: ["html"],
     // check if imports actually resolve
-    'settings': {
-        'import/resolver': {
-            'webpack': {
-                'config': 'build/webpack.base.conf.js'
-            }
-        }
+    settings: {
+        "import/resolver": {
+            webpack: {
+                config: "build/webpack.base.conf.js",
+            },
+        },
     },
     // add your custom rules here
-    'rules': {
+    rules: {
         // allow paren-less arrow functions
-        'arrow-parens': 0,
+        "arrow-parens": 0,
         // allow async-await
-        'generator-star-spacing': 0,
+        "generator-star-spacing": 0,
         // allow debugger during development
-        'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-        "indent": ["error", "tab"]   
-    }
-}
+        "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
+        indent: ["error", "tab"],
+    },
+};
